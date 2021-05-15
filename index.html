@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/svg" href="https://image.flaticon.com/icons/svg/2241/2241256.svg" />
+        <meta charset="utf-8">
+
+        <title>Sudoku Solver</title>
+    </head>
+
+    <body>
+
+    <div>
+      <h1>Sudoku Solver</h1>
+    </div>
+
+
+      <div class='center'>
+
+      <table id="board" class="center">
+        <tbody>
+          <tr>
+            <td><input type="text" id="00" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="10" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="20" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="30" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="40" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="50" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="60" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="70" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="80" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+          </tr>
+          <tr>
+            <td><input type="text" id="01" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="11" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="21" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="31" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="41" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="51" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="61" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="71" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="81" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+          </tr>
+
+          <tr>
+            <td><input type="text" id="02" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="12" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="22" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="32" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="42" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="52" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="62" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="72" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="82" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+          </tr>
+
+          <tr>
+            <td><input type="text" id="03" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="13" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="23" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="33" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="43" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="53" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="63" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="73" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="83" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+          </tr>
+
+          <tr>
+            <td><input type="text" id="04" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="14" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="24" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="34" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="44" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="54" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="64" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="74" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="84" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+          </tr>
+
+          <tr>
+            <td><input type="text" id="05" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="15" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="25" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="35" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="45" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="55" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="65" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="75" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="85" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+          </tr>
+
+          <tr>
+            <td><input type="text" id="06" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="16" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="26" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="36" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="46" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="56" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="66" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="76" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="86" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+          </tr>
+
+          <tr>
+            <td><input type="text" id="07" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="17" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="27" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="37" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="47" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="57" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="67" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="77" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="87" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+          </tr>
+
+          <tr>
+            <td><input type="text" id="08" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="18" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="28" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="38" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="48" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="58" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="68" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="78" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+            <td><input type="text" id="88" class="numberInput" required minlength="0" maxlength="1" size="1"></td>
+          </tr>
+
+
+          <tr>
+          </tr>
+
+        </tbody>
+      </table>
+
+
+
+      </div>
+
+      <div class='center'>
+        <button type="button" id="solve">Solve!</button>
+      </div>
+
+      <div>
+        <button type="button" id="clear">Clear</button>
+      </div>
+
+
+
+        <script src="app.js" charset="utf-8"></script>
+    </body>
+</html>

@@ -1,0 +1,106 @@
+
+
+body {
+    background-image: linear-gradient(#547980, #45ada8, #9de0ad, #e5fcc2);
+    background-size: cover;
+    background-position: center;
+    font-family: Lato;
+    font-weight: 300;
+    position: relative;
+    height: 150vh;
+    color: #555;
+}
+
+button {
+    position: absolute;
+
+
+    transform: translateX(-50%);
+    color: #555;
+    background: none;
+    border: none;
+    font-family: Lato;
+    color: #ffffff;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 300;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover { font-weight: 900; }
+button:hover i { margin-right: 20px; }
+
+button:focus {
+    outline: none;
+}
+
+
+
+h1 {
+  color: #ffffff;
+  font-family: 'Comfortaa', cursive;
+  text-emphasis: bold;
+  font-size: 4em;
+  align-self: center;
+  margin: auto;
+  width: 50%;
+  text-align: center;
+  padding-top: 1%;
+}
+
+
+.numberInput {
+  font-family: 'Comfortaa', cursive;
+  background-color: #fff;
+  font-size: 2em;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  border-style: none;
+  border-radius: 1px;
+  user-select: none;
+  outline:none;
+
+
+
+
+}
+
+.board button {
+  display: block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 0;
+  margin: 5px;
+  background: #bbb;
+}
+
+
+.center {
+  margin: auto;
+  width: 50%;
+  margin-top: 1%;
+}
+
+
+#solve {
+  font-family: 'Comfortaa', cursive;
+  color: #fff;
+  font-size: 2em;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+
+#clear {
+  font-family: 'Comfortaa', cursive;
+  color: #fff;
+  font-size: 1em;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 10px;
+
+}
